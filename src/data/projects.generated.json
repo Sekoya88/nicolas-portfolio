@@ -1,0 +1,90 @@
+{
+  "fr": [
+    {
+      "name": "Flow",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/Flow",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "RiskAnalysis",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/RiskAnalysis",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "pinguin",
+      "category": "Swift",
+      "tools": "Swift",
+      "href": "https://github.com/Sekoya88/pinguin",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "BEO",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/BEO",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "Sekoya88",
+      "category": "Open source",
+      "tools": "—",
+      "href": "https://github.com/Sekoya88/Sekoya88",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "AgentForge",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/AgentForge",
+      "image": "/images/placeholder.webp"
+    }
+  ],
+  "en": [
+    {
+      "name": "Flow",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/Flow",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "RiskAnalysis",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/RiskAnalysis",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "pinguin",
+      "category": "Swift",
+      "tools": "Swift",
+      "href": "https://github.com/Sekoya88/pinguin",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "BEO",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/BEO",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "Sekoya88",
+      "category": "Open source",
+      "tools": "—",
+      "href": "https://github.com/Sekoya88/Sekoya88",
+      "image": "/images/placeholder.webp"
+    },
+    {
+      "name": "AgentForge",
+      "category": "Python",
+      "tools": "Python",
+      "href": "https://github.com/Sekoya88/AgentForge",
+      "image": "/images/placeholder.webp"
+    }
+  ]
+}

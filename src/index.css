@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;500;600;700&display=swap");
 
 :root {
-  font-family: "Geist", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.5;
   scroll-behavior: smooth;
-  color-scheme: light dark;
-  color: #eae5ec;
+  color-scheme: dark;
+  color: var(--textPrimary);
   background-color: var(--backgroundColor);
 
   font-synthesis: none;
@@ -18,8 +18,13 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #c2a4ff;
-  --backgroundColor: #0b080c;
+  --accentColor: #22d3ee;
+  --accentSecondary: #a78bfa;
+  --backgroundColor: #05080f;
+  --surfaceColor: #0f172a;
+  --textPrimary: #e2e8f0;
+  --glowPrimary: rgba(34, 211, 238, 0.45);
+  --glowSecondary: rgba(167, 139, 250, 0.4);
   --vh: 100vh;
   --vh: 100svh;
 }
@@ -29,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Geist", sans-serif;
+  font-family: "Sora", sans-serif;
 }
 body {
   overflow: hidden;
@@ -58,7 +63,7 @@ main {
 body {
   margin: 0;
   height: auto;
-  background-color: #000;
+  background-color: var(--backgroundColor);
   flex-grow: 1;
   --cWidth: calc(100% - 30px);
   --cMaxWidth: 1920px;
@@ -109,11 +114,52 @@ body {
   left: 0;
   font-weight: 400;
   text-transform: uppercase;
+  color: var(--textPrimary);
+}
+
+.locale-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  background: transparent;
+  border: 1px solid var(--accentColor);
+  color: var(--accentColor);
+  font-family: "Sora", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.locale-toggle:hover {
+  background: var(--accentColor);
+  color: var(--backgroundColor);
+}
+
+.contact-credit {
+  font-size: 13px;
+  margin: 8px 0 0;
+  opacity: 0.75;
+}
+
+.contact-credit a:hover {
+  color: var(--accentSecondary);
 }
 
 @media screen and (min-width: 768px) {
   body {
     --cWidth: 94%;
+  }
+  .locale-toggle {
+    right: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 900px) {

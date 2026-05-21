@@ -1,15 +1,14 @@
+import { usePortfolio } from "../context/LocaleContext";
 import "./styles/About.css";
 
 const About = () => {
+  const { content } = usePortfolio();
+
   return (
     <div className="about-section" id="about">
       <div className="about-me">
-        <h3 className="title">About Me</h3>
-        <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
-        </p>
+        <h3 className="title">{content.about.title}</h3>
+        <p className="para">{content.about.body}</p>
       </div>
     </div>
   );

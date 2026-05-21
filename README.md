@@ -1,65 +1,35 @@
-# My Portfolio Website - Overview 🚀
+# Nicolas Edmond — Portfolio
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+Personal portfolio for **Nicolas Edmond** (AI/ML Engineer · Agentic Systems). Bilingual FR/EN.
 
----
+## Attribution
 
-## ⚠️ Usage Notice
+Inspired by and built from the open learning release of [Moncy Yohannan's portfolio](https://github.com/MoncyDev/Portfolio-Website) ([fork](https://github.com/Sekoya88/portfolio-website)). Original design by Moncy Yohannan — see [PPL v1.0](LICENSE).
 
-This project is shared for learning purposes only.
+## Stack
 
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
+React · TypeScript · Vite · GSAP · Three.js · React Three Fiber
 
-If you use parts of the code, you must provide proper credit linking back to the original repository.
+## Setup
 
-Build your own version — don’t just copy.
+```bash
+npm install
+npm run dev
+```
 
-— Moncy Yohannan
+## Sync GitHub projects (Work section)
 
----
+```bash
+npm run sync:projects
+```
 
-## 🛠️ Instructions
+Optional: `GITHUB_TOKEN` for higher API rate limits.
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
+## Deploy
 
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
+- **GitHub:** source of truth
+- **Railway:** static deploy from `dist/` after `npm run build`
 
----
+## GSAP note
 
-## ⚙️ Tech Stack
-
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
-
----
-
-## 🎨 Assets Usage
-
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
-
----
-
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
-
----
-
-## 📄 License
-
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+`gsap-trial` (ScrollSmoother, SplitText) is for local learning. For production without a GSAP Club license, replace trial plugins per [GSAP installation docs](https://gsap.com/docs/v3/Installation/).
