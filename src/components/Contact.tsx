@@ -4,7 +4,7 @@ import "./styles/Contact.css";
 
 const Contact = () => {
   const { content } = usePortfolio();
-  const { contact } = content;
+  const { contact, cv } = content;
 
   return (
     <div className="contact-section section-container" id="contact">
@@ -30,6 +30,17 @@ const Contact = () => {
             )}
           </div>
           <div className="contact-box">
+            <h4>{contact.cvLabel}</h4>
+            <p>
+              <a
+                href={cv.href}
+                download={cv.fileName}
+                data-cursor="disable"
+                className="contact-cv-link"
+              >
+                {cv.label} (PDF)
+              </a>
+            </p>
             <h4>{contact.socialLabel}</h4>
             {contact.social.map((item) => (
               <a

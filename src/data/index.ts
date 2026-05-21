@@ -1,6 +1,7 @@
 import type { Locale, PortfolioContent } from "./portfolio.types";
 import { portfolioEn } from "./portfolio.en";
 import { portfolioFr } from "./portfolio.fr";
+import { getProjects } from "./projects";
 
 const contentByLocale: Record<Locale, PortfolioContent> = {
   fr: portfolioFr,
@@ -8,7 +9,11 @@ const contentByLocale: Record<Locale, PortfolioContent> = {
 };
 
 export function getPortfolioContent(locale: Locale): PortfolioContent {
-  return contentByLocale[locale];
+  const base = contentByLocale[locale];
+  return {
+    ...base,
+    work: { ...base.work, projects: getProjects(locale) },
+  };
 }
 
 export type { Locale, PortfolioContent, Project, Job } from "./portfolio.types";

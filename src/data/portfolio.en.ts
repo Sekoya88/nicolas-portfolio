@@ -1,22 +1,21 @@
 import type { PortfolioContent } from "./portfolio.types";
-import projects from "./projects.generated.json";
 
 export const portfolioEn: PortfolioContent = {
   meta: {
-    title: "Nicolas Edmond — AI/ML · Agentic Systems",
+    title: "Nicolas Edmond — ML / AI Engineer",
     description:
-      "Portfolio of Nicolas Edmond: ML engineering, agents, RAG, MLOps, and agentic systems.",
+      "Portfolio of Nicolas Edmond — production-grade agentic systems, hybrid RAG, and ML pipelines. Bordeaux, France.",
   },
   landing: {
     greeting: "Hello! I'm",
     name: "NICOLAS",
     nameLine2: "EDMOND",
-    roles: ["Agentic Engineer", "AI/ML"],
-    tagline: "Systems",
+    roles: ["ML / AI Engineer", "Agentic Systems"],
+    tagline: "Bordeaux",
   },
   nav: {
     logo: "NE",
-    email: "contact@nicolasedmond.dev",
+    email: "nicolasedmond8@gmail.com",
     sections: [
       { id: "#about", label: "ABOUT" },
       { id: "#work", label: "WORK" },
@@ -25,7 +24,7 @@ export const portfolioEn: PortfolioContent = {
   },
   about: {
     title: "About Me",
-    body: "AI/ML engineer focused on agentic systems: agent orchestration, MCP tools, RAG pipelines, and model evaluation. I build products where the LLM is a dependable layer — with observability, guardrails, and production deployment. Full-stack and MLOps background from research to shipped features.",
+    body: "AI Engineer focused on architecting robust, production-grade agentic systems. I specialize in designing multi-agent workflows, hybrid RAG pipelines, and high-performance backends — staying at the forefront of AI research to solve complex real-world problems. Forged by endurance sports, I prioritize architectural purity, system reliability, and minimizing latency in LLM-powered infrastructures.",
   },
   whatIDo: {
     titleLine1: { first: "W", rest: "HAT" },
@@ -36,35 +35,35 @@ export const portfolioEn: PortfolioContent = {
         title: "AGENTIC",
         descriptionLabel: "Description",
         description:
-          "Agent architectures, tool calling, durable workflows, and MCP integrations to automate complex tasks with human oversight.",
+          "Deterministic multi-agent workflows (LangGraph), tool calling, hybrid RAG with RRF, and cloud orchestration (AWS Lambda, GCP Vertex AI) for complex document and decision pipelines.",
         skillsLabel: "Skillset & tools",
         skills: [
+          "LangGraph",
           "LangChain",
-          "OpenAI SDK",
-          "MCP",
-          "RAG",
-          "Evals",
-          "TypeScript",
-          "Python",
+          "Vertex AI",
+          "AWS Lambda",
+          "Redis",
+          "pgvector",
           "FastAPI",
+          "Docker",
         ],
       },
       {
         id: "ml",
-        title: "ML / MLOPS",
+        title: "ML / DATA",
         descriptionLabel: "Description",
         description:
-          "Fine-tuning, serving, feature pipelines, and monitoring — from notebooks to scalable cloud or on-prem deployment.",
+          "From time-series forecasting and ETL at scale to fine-tuning VLMs (QLoRA, DPO) and ensemble ML — notebooks to monitored production with clean architecture and rigorous evaluation.",
         skillsLabel: "Skillset & tools",
         skills: [
           "PyTorch",
-          "HuggingFace",
-          "MLflow",
-          "Docker",
-          "Kubernetes",
+          "Hugging Face",
+          "Unsloth",
+          "scikit-learn",
           "PostgreSQL",
-          "Ray",
-          "Weights & Biases",
+          "XGBoost",
+          "Pandas",
+          "MLflow",
         ],
       },
     ],
@@ -72,33 +71,66 @@ export const portfolioEn: PortfolioContent = {
   work: {
     title: "My",
     titleHighlight: "Work",
-    projects: projects.en,
+    projects: [],
+  },
+  cv: {
+    href: "/CV-Nicolas-Edmond.pdf",
+    label: "Download CV",
+    fileName: "CV-Nicolas-Edmond.pdf",
   },
   career: {
     title: "My career",
     titleSpan: "&",
     titleBreak: "experience",
-    jobs: [
+    experienceTitle: "Professional experience",
+    educationTitle: "Education",
+    experience: [
       {
-        role: "AI/ML Engineer — Agentic Systems",
-        company: "Independent / R&D",
-        period: "2024 — Present",
+        role: "Co-CTO — AI & Agentic Engineer",
+        company: "Formalis.IA · Bordeaux",
+        period: "Sep 2025 — Present",
         description:
-          "Multi-tool agents, RAG pipelines, and evaluation harnesses for scientific and product applications.",
+          "LangGraph + Vertex AI pipeline (Classifier, Detector, Mapper, Validator) for legal PDF automation. AWS Lambda orchestrator (AWS ↔ GCP), DynamoDB observability, parallel S3 extraction, INPI/RNE API submissions — replacing legacy manual review.",
       },
       {
-        role: "Senior Software Engineer",
-        company: "Platform & product",
-        period: "2020 — 2024",
+        role: "Data Engineer",
+        company: "RTE · Lille",
+        period: "Sep 2022 — Sep 2025",
         description:
-          "Full-stack architecture, typed APIs, CI/CD, and production ML service integration.",
+          "Built FIDEL (Shiny/R): ARIMA/SARIMA + ML wind forecasts for 300+ farms (+15% grid balancing). Large-scale ETL on PostgreSQL/Oracle — 200+ hours/year of manual wrangling eliminated.",
+      },
+    ],
+    education: [
+      {
+        role: "Specialized Master in Big Data",
+        company: "GEM & Ensimag — Grenoble",
+        period: "2025 — 2026",
+        description:
+          "ML, deep learning, large-scale data processing, customer knowledge & marketing.",
       },
       {
-        role: "Software Engineer",
-        company: "Startup / consulting",
-        period: "2017 — 2020",
-        description:
-          "Web development, data pipelines, and early model deployments in client environments.",
+        role: "Engineering (Electrical & Energy)",
+        company: "ESME — Lille",
+        period: "2022 — 2025",
+        description: "Electrical engineering, computer vision, assembly.",
+      },
+      {
+        role: "BA1 — Bachelor",
+        company: "EPFL — Lausanne",
+        period: "2021 — 2022",
+        description: "Mechanical engineering.",
+      },
+      {
+        role: "Intensive Preparatory Classes (CPGE)",
+        company: "Lycée Faidherbe — Lille",
+        period: "2019 — 2021",
+        description: "Physics, chemistry, mathematics (PCSI/PC).",
+      },
+      {
+        role: "High School Diploma (Scientific)",
+        company: "LFIB — Bangkok, Thailand",
+        period: "2016 — 2019",
+        description: "",
       },
     ],
   },
@@ -107,7 +139,9 @@ export const portfolioEn: PortfolioContent = {
     emailLabel: "Email",
     phoneLabel: "Phone",
     socialLabel: "Social",
-    email: "contact@nicolasedmond.dev",
+    cvLabel: "Resume",
+    email: "nicolasedmond8@gmail.com",
+    phone: "+33 7 83 26 53 18",
     social: [
       {
         id: "github",
@@ -117,7 +151,7 @@ export const portfolioEn: PortfolioContent = {
       {
         id: "linkedin",
         label: "Linkedin",
-        url: "https://www.linkedin.com/in/nicolasedmond",
+        url: "https://www.linkedin.com/in/nicolas-edmond8/",
       },
     ],
     footerLine1: "Designed and Developed",
@@ -130,10 +164,10 @@ export const portfolioEn: PortfolioContent = {
   loading: {
     logo: "NE",
     marquee: [
+      " ML / AI Engineer ",
       " Agentic Systems ",
-      " AI/ML Engineer ",
+      " ML / AI Engineer ",
       " Agentic Systems ",
-      " AI/ML Engineer ",
     ],
     loadingLabel: "Loading",
     welcome: "Welcome",

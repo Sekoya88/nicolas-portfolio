@@ -1,6 +1,11 @@
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const META = JSON.parse(
+  readFileSync(join(ROOT, "src/data/project-images.json"), "utf8")
+);
 
 const USER = "Sekoya88";
 const EXCLUDE = new Set([
@@ -41,12 +46,13 @@ const filtered = repos
 function toProject(repo) {
   const topics = (repo.topics ?? []).slice(0, 4);
   const tools = [repo.language, ...topics].filter(Boolean).join(" · ");
+  const custom = META[repo.name];
   return {
     name: repo.name,
     category: repo.language ?? topics[0] ?? "Open source",
     tools: tools || "—",
     href: repo.html_url,
-    image: "/images/placeholder.webp",
+    image: custom?.image ?? "/images/placeholder.webp",
   };
 }
 

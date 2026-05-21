@@ -1,15 +1,16 @@
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { TbDownload } from "react-icons/tb";
 import "./styles/SocialIcons.css";
-import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
+import { usePortfolio } from "../context/LocaleContext";
 import HoverLinks from "./HoverLinks";
 
 const SocialIcons = () => {
+  const { content } = usePortfolio();
+  const { cv } = content;
+  const github = content.contact.social.find((s) => s.id === "github");
+  const linkedin = content.contact.social.find((s) => s.id === "linkedin");
+
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
 
@@ -59,31 +60,30 @@ const SocialIcons = () => {
   return (
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
-        <span>
-          <a href="https://github.com" target="_blank">
-            <FaGithub />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.linkedin.com" target="_blank">
-            <FaLinkedinIn />
-          </a>
-        </span>
-        <span>
-          <a href="https://x.com" target="_blank">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.instagram.com" target="_blank">
-            <FaInstagram />
-          </a>
-        </span>
+        {github && (
+          <span>
+            <a href={github.url} target="_blank" rel="noreferrer">
+              <FaGithub />
+            </a>
+          </span>
+        )}
+        {linkedin && (
+          <span>
+            <a href={linkedin.url} target="_blank" rel="noreferrer">
+              <FaLinkedinIn />
+            </a>
+          </span>
+        )}
       </div>
-      <a className="resume-button" href="#">
-        <HoverLinks text="RESUME" />
+      <a
+        className="resume-button"
+        href={cv.href}
+        download={cv.fileName}
+        data-cursor="disable"
+      >
+        <HoverLinks text={cv.label.toUpperCase()} />
         <span>
-          <TbNotes />
+          <TbDownload />
         </span>
       </a>
     </div>

@@ -43,12 +43,26 @@ export interface PortfolioContent {
     }[];
   };
   work: { title: string; titleHighlight: string; projects: Project[] };
-  career: { title: string; titleSpan: string; titleBreak: string; jobs: Job[] };
+  career: {
+    title: string;
+    titleSpan: string;
+    titleBreak: string;
+    experienceTitle: string;
+    educationTitle: string;
+    experience: Job[];
+    education: Job[];
+  };
+  cv: {
+    href: string;
+    label: string;
+    fileName: string;
+  };
   contact: {
     sectionTitle: string;
     emailLabel: string;
     phoneLabel: string;
     socialLabel: string;
+    cvLabel: string;
     email: string;
     phone?: string;
     social: { id: string; label: string; url: string }[];

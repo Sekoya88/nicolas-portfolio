@@ -29,6 +29,23 @@
   font-family: "Geist", sans-serif;
   font-weight: 300;
 }
+
+.career-subtitle {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accentPrimary, #c8bfff);
+  margin: 0 auto 48px;
+  text-align: left;
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+}
+
+.career-subtitle--education {
+  margin-top: 80px;
+}
+
 .career-info {
   position: relative;
   display: flex;

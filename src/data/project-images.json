@@ -1,0 +1,32 @@
+{
+  "Flow": {
+    "image": "/images/projects/flow.jpg",
+    "category": { "fr": "Runtime agentique", "en": "Agentic runtime" },
+    "tools": "Python · LangGraph · MCP"
+  },
+  "RiskAnalysis": {
+    "image": "/images/projects/riskanalysis.jpg",
+    "category": { "fr": "Multi-agents · Risk AI", "en": "Multi-agent · Risk AI" },
+    "tools": "LangGraph · pgvector · Redis"
+  },
+  "pinguin": {
+    "image": "/images/projects/pinguin.jpg",
+    "category": { "fr": "App iOS", "en": "iOS app" },
+    "tools": "Swift · SwiftUI"
+  },
+  "BEO": {
+    "image": "/images/projects/beo.jpg",
+    "category": { "fr": "Data · Python", "en": "Data · Python" },
+    "tools": "Python · Pandas"
+  },
+  "Sekoya88": {
+    "image": "/images/projects/sekoya88.jpg",
+    "category": { "fr": "Open source · Profil", "en": "Open source · Profile" },
+    "tools": "GitHub · README"
+  },
+  "AgentForge": {
+    "image": "/images/projects/agentforge.jpg",
+    "category": { "fr": "Agents LLM", "en": "LLM agents" },
+    "tools": "Python · LangChain · Evals"
+  }
+}
