@@ -1,6 +1,6 @@
 # Nicolas Edmond — Portfolio
 
-Personal portfolio for **Nicolas Edmond** (AI/ML Engineer · Agentic Systems). Bilingual FR/EN.
+Personal portfolio for **Nicolas Edmond** (AI/ML Engineer · Agentic Systems). English only.
 
 ## Attribution
 

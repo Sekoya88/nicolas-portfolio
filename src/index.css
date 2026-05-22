@@ -117,30 +117,6 @@ body {
   color: var(--textPrimary);
 }
 
-.locale-toggle {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10000;
-  background: transparent;
-  border: 1px solid var(--accentColor);
-  color: var(--accentColor);
-  font-family: "Sora", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  padding: 6px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.locale-toggle:hover {
-  background: var(--accentColor);
-  color: var(--backgroundColor);
-}
-
 .contact-credit {
   font-size: 13px;
   margin: 8px 0 0;
@@ -154,12 +130,6 @@ body {
 @media screen and (min-width: 768px) {
   body {
     --cWidth: 94%;
-  }
-  .locale-toggle {
-    right: auto;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 900px) {

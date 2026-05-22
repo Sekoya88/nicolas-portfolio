@@ -1,6 +1,6 @@
 import type { PortfolioContent } from "./portfolio.types";
 
-export const portfolioEn: PortfolioContent = {
+export const portfolio: PortfolioContent = {
   meta: {
     title: "Nicolas Edmond — ML / AI Engineer",
     description:

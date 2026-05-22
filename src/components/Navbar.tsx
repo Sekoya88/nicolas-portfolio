@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
-  const { content, locale, toggleLocale } = usePortfolio();
+  const { content } = usePortfolio();
   const { nav } = content;
 
   useEffect(() => {
@@ -52,15 +52,6 @@ const Navbar = () => {
         <a href="/#" className="navbar-title" data-cursor="disable">
           {nav.logo}
         </a>
-        <button
-          type="button"
-          className="locale-toggle"
-          onClick={toggleLocale}
-          data-cursor="disable"
-          aria-label="Toggle language"
-        >
-          {locale === "fr" ? "EN" : "FR"}
-        </button>
         <a
           href={`mailto:${nav.email}`}
           className="navbar-connect"

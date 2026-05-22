@@ -58,7 +58,7 @@ function toProject(repo) {
 
 const projects = filtered.map(toProject);
 
-const payload = { fr: projects, en: projects };
+const payload = { projects };
 
 writeFileSync(OUT, JSON.stringify(payload, null, 2) + "\n");
 console.log(`Wrote ${projects.length} projects to ${OUT}`);

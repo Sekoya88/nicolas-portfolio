@@ -1,5 +1,3 @@
-export type Locale = "fr" | "en";
-
 export interface Project {
   name: string;
   category: string;
