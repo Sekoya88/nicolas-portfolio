@@ -86,7 +86,7 @@ export const portfolio: PortfolioContent = {
     educationTitle: "Education",
     experience: [
       {
-        role: "Co-CTO — AI & Agentic Engineer",
+        role: "AI Engineer",
         company: "Formalis.IA · Bordeaux",
         period: "Sep 2025 — Present",
         description:
@@ -130,7 +130,7 @@ export const portfolio: PortfolioContent = {
         role: "High School Diploma (Scientific)",
         company: "LFIB — Bangkok, Thailand",
         period: "2016 — 2019",
-        description: "",
+        description: "Scientific baccalaureate, international section.",
       },
     ],
   },

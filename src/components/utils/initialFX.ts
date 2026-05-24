@@ -35,9 +35,13 @@ export function initialFX() {
 
   let TextProps = { type: "chars,lines", linesClass: "split-h2" };
 
+  gsap.set([".landing-h2-2", ".landing-h2-info-1"], { opacity: 1 });
+
   var landingText2 = new SplitText(".landing-h2-info", TextProps);
+  var landingText4 = new SplitText(".landing-h2-1", TextProps);
+
   gsap.fromTo(
-    landingText2.chars,
+    [landingText2.chars, landingText4.chars],
     { opacity: 0, y: 80, filter: "blur(5px)" },
     {
       opacity: 1,
@@ -45,7 +49,7 @@ export function initialFX() {
       filter: "blur(0px)",
       ease: "power3.inOut",
       y: 0,
-      stagger: 0.025,
+      stagger: 0.015,
       delay: 0.3,
     }
   );
@@ -73,7 +77,6 @@ export function initialFX() {
   );
 
   var landingText3 = new SplitText(".landing-h2-info-1", TextProps);
-  var landingText4 = new SplitText(".landing-h2-1", TextProps);
   var landingText5 = new SplitText(".landing-h2-2", TextProps);
 
   LoopText(landingText2, landingText3);
@@ -81,56 +84,61 @@ export function initialFX() {
 }
 
 function LoopText(Text1: SplitText, Text2: SplitText) {
-  var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-  const delay = 4;
-  const delay2 = delay * 2 + 1;
+  // Ensure Text2 starts fully hidden
+  gsap.set(Text2.chars, { opacity: 0, y: 80 });
 
+  const swapDuration = 1.2;
+  const holdDuration = 4;
+
+  const tl = gsap.timeline({ repeat: -1 });
+
+  // Phase 1: Hold Text1 visible for holdDuration
+  tl.to({}, { duration: holdDuration });
+
+  // Phase 2: Swap — Text1 out, Text2 in (simultaneously)
+  tl.to(Text1.chars, {
+    y: -80,
+    opacity: 0,
+    duration: swapDuration,
+    ease: "power3.inOut",
+    stagger: 0.03,
+  });
   tl.fromTo(
     Text2.chars,
     { opacity: 0, y: 80 },
     {
       opacity: 1,
-      duration: 1.2,
-      ease: "power3.inOut",
       y: 0,
-      stagger: 0.1,
-      delay: delay,
+      duration: swapDuration,
+      ease: "power3.inOut",
+      stagger: 0.03,
+      immediateRender: false,
     },
-    0
-  )
-    .fromTo(
-      Text1.chars,
-      { y: 80 },
-      {
-        duration: 1.2,
-        ease: "power3.inOut",
-        y: 0,
-        stagger: 0.1,
-        delay: delay2,
-      },
-      1
-    )
-    .fromTo(
-      Text1.chars,
-      { y: 0 },
-      {
-        y: -80,
-        duration: 1.2,
-        ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay,
-      },
-      0
-    )
-    .to(
-      Text2.chars,
-      {
-        y: -80,
-        duration: 1.2,
-        ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay2,
-      },
-      1
-    );
+    "<"
+  );
+
+  // Phase 3: Hold Text2 visible for holdDuration
+  tl.to({}, { duration: holdDuration });
+
+  // Phase 4: Swap back — Text2 out, Text1 in (simultaneously)
+  tl.to(Text2.chars, {
+    y: -80,
+    opacity: 0,
+    duration: swapDuration,
+    ease: "power3.inOut",
+    stagger: 0.03,
+  });
+  tl.fromTo(
+    Text1.chars,
+    { opacity: 0, y: 80 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: swapDuration,
+      ease: "power3.inOut",
+      stagger: 0.03,
+      immediateRender: false,
+    },
+    "<"
+  );
 }

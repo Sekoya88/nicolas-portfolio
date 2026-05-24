@@ -30,6 +30,31 @@
   font-weight: 600;
   cursor: pointer;
 }
+.header ul a.nav-active {
+  color: var(--accentColor);
+}
+.header ul a.nav-active .hover-in {
+  color: var(--accentColor);
+}
+.header ul a {
+  position: relative;
+}
+.header ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accentColor);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.header ul a.nav-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 .navbar-connect {
   position: absolute;
   display: none;

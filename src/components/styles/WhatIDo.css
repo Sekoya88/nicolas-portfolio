@@ -238,6 +238,15 @@
   background-color: rgba(255, 255, 255, 0.15);
   border: 1px solid #ffffff50;
   border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+.what-tags:hover {
+  background-color: rgba(34, 211, 238, 0.15);
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.25), inset 0 0 8px rgba(34, 211, 238, 0.08);
+  transform: translateY(-1px);
 }
 @media only screen and (max-width: 1600px) {
   .what-box h2 {

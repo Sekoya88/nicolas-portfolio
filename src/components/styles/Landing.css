@@ -88,20 +88,21 @@
 
 .avatar-hero__glow {
   position: absolute;
-  width: min(480px, 55vw);
-  height: min(520px, 60vh);
+  width: min(420px, 48vw);
+  height: min(460px, 55vh);
   left: 50%;
-  bottom: 14%;
+  bottom: 16%;
   transform: translateX(-50%);
   background: radial-gradient(
-    ellipse 55% 50% at 50% 55%,
-    rgba(167, 139, 250, 0.55) 0%,
-    rgba(127, 64, 255, 0.2) 35%,
-    transparent 72%
+    ellipse 50% 45% at 50% 55%,
+    rgba(167, 139, 250, 0.6) 0%,
+    rgba(127, 64, 255, 0.3) 30%,
+    rgba(34, 211, 238, 0.08) 55%,
+    transparent 70%
   );
-  filter: blur(52px);
+  filter: blur(44px);
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.85;
   pointer-events: none;
 }
 
@@ -256,7 +257,7 @@
 }
 .landing-info h2 {
   margin: 0;
-  margin-top: -20px;
+  margin-top: 10px;
   margin-left: 20px;
   font-family: "Geist", sans-serif;
   font-weight: 600;
@@ -271,6 +272,8 @@
 .landing-h2-info-1 {
   position: absolute;
   top: 0;
+  left: 0;
+  opacity: 0;
 }
 h2.landing-info-h2 {
   color: #c481ff;
@@ -285,6 +288,8 @@ h2.landing-info-h2 {
 .landing-h2-2 {
   position: absolute;
   top: 0;
+  left: 0;
+  opacity: 0;
 }
 .landing-info-h2::after {
   content: "";
@@ -294,11 +299,12 @@ h2.landing-info-h2 {
   z-index: 3;
   background-image: linear-gradient(
     0deg,
-    var(--backgroundColor) 40%,
-    rgba(0, 0, 0, 0) 110%
+    var(--backgroundColor) 10%,
+    rgba(0, 0, 0, 0) 60%
   );
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 @media screen and (min-width: 500px) {
   .landing-circle2 {

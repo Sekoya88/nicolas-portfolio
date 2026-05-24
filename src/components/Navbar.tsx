@@ -41,6 +41,37 @@ const Navbar = () => {
         }
       });
     });
+
+    // Active section highlighting
+    const sectionIds = ["#about", "#work", "#contact"];
+    sectionIds.forEach((id) => {
+      const el = document.querySelector(id);
+      if (!el) return;
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top 40%",
+        end: "bottom 40%",
+        onEnter: () => setActiveLink(id),
+        onEnterBack: () => setActiveLink(id),
+        onLeave: () => clearActiveLink(id),
+        onLeaveBack: () => clearActiveLink(id),
+      });
+    });
+
+    function setActiveLink(id: string) {
+      links.forEach((link) => {
+        const href = (link as HTMLAnchorElement).getAttribute("data-href");
+        if (href === id) link.classList.add("nav-active");
+        else link.classList.remove("nav-active");
+      });
+    }
+    function clearActiveLink(id: string) {
+      links.forEach((link) => {
+        const href = (link as HTMLAnchorElement).getAttribute("data-href");
+        if (href === id) link.classList.remove("nav-active");
+      });
+    }
+
     const onResize = () => ScrollSmoother.refresh(true);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);

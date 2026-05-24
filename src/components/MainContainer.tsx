@@ -27,8 +27,31 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     };
   }, [isDesktopView]);
 
+  useEffect(() => {
+    const bar = document.querySelector(".scroll-progress") as HTMLElement | null;
+    const wrapper = document.getElementById("smooth-wrapper");
+    if (!bar || !wrapper) return;
+
+    const updateProgress = () => {
+      const scrollTop = wrapper.scrollTop || window.scrollY || 0;
+      const scrollHeight =
+        (wrapper.scrollHeight || document.documentElement.scrollHeight) -
+        window.innerHeight;
+      const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
+      bar.style.setProperty("--scroll-progress", String(progress));
+    };
+
+    wrapper.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    return () => {
+      wrapper.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("scroll", updateProgress);
+    };
+  }, []);
+
   return (
     <div className="container-main">
+      <div className="scroll-progress" />
       <Cursor />
       <Navbar />
       <SocialIcons />
